@@ -101,6 +101,15 @@ if AOS_BOARD_DH5021A_EVB
     source "platform/arch/csky/cskyv2-l/Config.in"
 endif
 
+source "board/easyarm-rt1052/Config.in"
+if AOS_BOARD_EASYARM_RT1052
+    config AOS_BUILD_BOARD
+        default "easyarm-rt1052"
+
+    source "platform/mcu/mimxrt1052cvl5b/Config.in"
+    source "platform/arch/arm/armv7m/Config.in"
+endif
+
 source "board/eml3047/Config.in"
 if AOS_BOARD_EML3047
     config AOS_BUILD_BOARD
