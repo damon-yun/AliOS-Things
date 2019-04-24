@@ -244,20 +244,21 @@ void cli_service_init(kinit_t *kinit)
 
 void aos_show_welcome(void)
 {
-    puts("             Welcome to AliOS Things           ");
+    puts("             Welcome to AliOS Things           \r\n");
 #ifdef CONFIG_AOS_INIT_WELCOME
-    puts("       ¨€¨€¨€¨€¨€¨[ ¨€¨€¨[     ¨€¨€¨[ ¨€¨€¨€¨€¨€¨€¨[ ¨€¨€¨€¨€¨€¨€¨€¨[     ");
-    puts("      ¨€¨€¨X¨T¨T¨€¨€¨[¨€¨€¨U     ¨€¨€¨U¨€¨€¨X¨T¨T¨T¨€¨€¨[¨€¨€¨X¨T¨T¨T¨T¨a     ");
-    puts("      ¨€¨€¨€¨€¨€¨€¨€¨U¨€¨€¨U     ¨€¨€¨U¨€¨€¨U   ¨€¨€¨U¨€¨€¨€¨€¨€¨€¨€¨[     ");
-    puts("      ¨€¨€¨X¨T¨T¨€¨€¨U¨€¨€¨U     ¨€¨€¨U¨€¨€¨U   ¨€¨€¨U¨^¨T¨T¨T¨T¨€¨€¨U     ");
-    puts("      ¨€¨€¨U  ¨€¨€¨U¨€¨€¨€¨€¨€¨€¨€¨[¨€¨€¨U¨^¨€¨€¨€¨€¨€¨€¨X¨a¨€¨€¨€¨€¨€¨€¨€¨U     ");
-    puts("      ¨^¨T¨a  ¨^¨T¨a¨^¨T¨T¨T¨T¨T¨T¨a¨^¨T¨a ¨^¨T¨T¨T¨T¨T¨a ¨^¨T¨T¨T¨T¨T¨T¨a     ");
-    puts("¨€¨€¨€¨€¨€¨€¨€¨€¨[¨€¨€¨[  ¨€¨€¨[¨€¨€¨[¨€¨€¨€¨[   ¨€¨€¨[ ¨€¨€¨€¨€¨€¨€¨[ ¨€¨€¨€¨€¨€¨€¨€¨[");
-    puts("¨^¨T¨T¨€¨€¨X¨T¨T¨a¨€¨€¨U  ¨€¨€¨U¨€¨€¨U¨€¨€¨€¨€¨[  ¨€¨€¨U¨€¨€¨X¨T¨T¨T¨T¨a ¨€¨€¨X¨T¨T¨T¨T¨a");
-    puts("   ¨€¨€¨U   ¨€¨€¨€¨€¨€¨€¨€¨U¨€¨€¨U¨€¨€¨X¨€¨€¨[ ¨€¨€¨U¨€¨€¨U  ¨€¨€¨€¨[¨€¨€¨€¨€¨€¨€¨€¨[");
-    puts("   ¨€¨€¨U   ¨€¨€¨X¨T¨T¨€¨€¨U¨€¨€¨U¨€¨€¨U¨^¨€¨€¨[¨€¨€¨U¨€¨€¨U   ¨€¨€¨U¨^¨T¨T¨T¨T¨€¨€¨U");
-    puts("   ¨€¨€¨U   ¨€¨€¨U  ¨€¨€¨U¨€¨€¨U¨€¨€¨U ¨^¨€¨€¨€¨€¨U¨^¨€¨€¨€¨€¨€¨€¨X¨a¨€¨€¨€¨€¨€¨€¨€¨U");
-    puts("   ¨^¨T¨a   ¨^¨T¨a  ¨^¨T¨a¨^¨T¨a¨^¨T¨a  ¨^¨T¨T¨T¨a ¨^¨T¨T¨T¨T¨T¨a ¨^¨T¨T¨T¨T¨T¨T¨a");
+    // puts("    _     _   _        ____  Things\r\n");
+    // puts("   / \   | |  _  ___  / ___|       \r\n");
+    // puts("  / ^ \  | | | |/ _ \ \___ \       \r\n");
+    // puts(" / / \ \ | | | | (_) | ___) |      \r\n");
+    // puts("/_/   \_\|_| |_|\___/ |____/       \r\n");
+
+    puts("                                     \r\n");
+    puts("    _     _   _   ____  ____  Things\r\n");
+    puts("   / \\   | |  _  /    \\/ ___|       \r\n");
+    puts("  / ^ \\  | | | |/  /\\  \\___ \\       \r\n");
+    puts(" / / \\ \\ | | | |\\  \\/  /___)|      \r\n");
+    puts("/_/   \\_\\|_| |_| \\____/|____/       \r\n");    
+    puts("                                     \r\n");
 #endif
 }
 
