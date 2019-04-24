@@ -32,8 +32,11 @@ int32_t cli_getchar(char *inbuf)
     uint32_t recv_size = 0;
 
     memset(&uart_stdio, 0, sizeof(uart_dev_t));
+#ifdef EASYARM_RT1052 //modified by damon for easyarm-rt1052
+    uart_stdio.port = 1;
+#else
     uart_stdio.port = 0;
-
+#endif
     ret = hal_uart_recv_II(&uart_stdio, inbuf, 1, &recv_size, HAL_WAIT_FOREVER);
 
     if ((ret == 0) && (recv_size == 1)) {
@@ -48,7 +51,11 @@ int32_t cli_putstr(char *msg)
     uart_dev_t uart_stdio;
 
     memset(&uart_stdio, 0, sizeof(uart_dev_t));
+#ifdef EASYARM_RT1052 //modified by damon for easyarm-rt1052
+    uart_stdio.port = 1;
+#else
     uart_stdio.port = 0;
+#endif
 
     if (msg[0] != 0) {
 
