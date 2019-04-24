@@ -149,6 +149,12 @@ if AOS_APP_PROV_APP
         default "prov_app"
 endif
 
+source "app/example/simple_mqtt/Config.in"
+if AOS_APP_SIMPLE_MQTT
+    config AOS_BUILD_APP
+        default "simple_mqtt"
+endif
+
 source "app/example/sk/sk_gui/Config.in"
 if AOS_APP_SK_GUI
     config AOS_BUILD_APP
