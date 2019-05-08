@@ -1,0 +1,14 @@
+config AOS_APP_DEVICE_CTRL
+    bool "device ctrl Sample"
+    select AOS_COMP_NETMGR
+    select AOS_COMP_CLI
+    select AOS_COMP_CJSON
+    select AOS_COMP_LINKKIT_SDK_C
+    select APP_FEATURE_LINKKIT_MQTT
+    help
+        device ctrl sample
+
+if AOS_APP_DEVICE_CTRL
+# Configurations for app device ctrl
+endif
+
